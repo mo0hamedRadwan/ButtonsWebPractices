@@ -1,0 +1,376 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins" , sans-serif;
+}
+
+section{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+/* Button 1 Style */
+
+.btn-1{
+    padding: 30px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+}
+
+.btn-1 a{
+    display: inline-block;
+    padding: 10px 30px;
+    border: 3px solid #00f;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    /* -webkit-box-reflect: below 0px linear-gradient(transparent , #0002); */
+    position: relative;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.btn-1 a:hover{
+    color: #000;
+    box-shadow: 0px 0px 20px #00f;
+}
+
+.btn-1 a::before,
+.btn-1 a::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #00f;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 30px;
+
+    transition: width 0.5s, left 0.5s , top 0.5s, height 0.5s , box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s , 0s, 0s;
+}
+
+.btn-1 a:hover::before,
+.btn-1 a:hover::after{
+    width: 60%;
+    height: 100%;
+    top: 0;
+    border-radius: 0px;
+
+    transition-delay: 0s, 0.5s, 0.5s, 0.5s , 0.5s;
+}
+
+.btn-1 a::before{
+    left: -30px;
+    box-shadow: 10px 10px 0 #00f,
+                10px -10px 0 #00f;
+}
+
+.btn-1 a::after{
+    right: -30px;
+    box-shadow: -10px 10px 0 #00f,
+                -10px -10px 0 #00f;
+}
+
+
+.btn-1 a:hover::before{
+    left: -3px;
+    box-shadow: 10px 0 0 #00f,
+                10px 0 0 #00f;
+}
+
+.btn-1 a:hover::after{
+    right: -3px;
+    box-shadow: -10px 0 0 #00f,
+                -10px 0 0 #00f;
+}
+
+.btn-1 a span{
+    position: relative;
+    z-index: 1;
+}
+
+/* Button 2 Style */
+
+.btn-2{
+    padding: 40px;
+    background-color: #43345d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-2 a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    /* box-shadow: 0px 5px 25px rgba(0,0,0, 0.25); */
+    position: relative;
+}
+
+.btn-2 a span{
+    width: 100%;
+    height: 100%;
+    
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.btn-2 a span:nth-child(1){
+    background-color: #6c4ba5;
+    color: #fff;
+}
+
+.btn-2 a span:nth-child(2){
+    background-color: #fff;
+    color: #6c4ba5;
+    z-index: 2;
+    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 60% 100%, 40% 53%);
+    /* overflow: hidden; */
+}
+
+.btn-2 a span:nth-child(1):hover 
+~ span:nth-child(2){
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+}
+
+.btn-2 a span:nth-child(2):hover{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+}
+
+/* Button 3 Style */
+
+.btn-3{
+    padding: 30px;
+    background-color: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.btn-3 a{
+    width: 200px;
+    height: 60px;
+    background-color: #222;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-3 a::before,
+.btn-3 a::after{
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: #00fe73;
+    position: absolute;
+    top: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-3 a::before{
+    left: 0;
+}
+
+.btn-3 a::after{
+    right: 0;
+}
+
+.btn-3 a:hover::before,
+.btn-3 a:hover::after{
+    width: 50%;
+}
+
+.btn-3 a span {
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+    
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.btn-3 a span:nth-child(1) {
+    transform: scale(1);
+}
+
+.btn-3 a span:nth-child(2) {
+    /* display: none; */
+    transform: scale(3);
+    opacity: 0;
+    transition-delay: 0.5s;
+}
+
+.btn-3 a:hover span:nth-child(1){
+    transform: scale(0);
+}
+
+.btn-3 a:hover span:nth-child(2) {
+    transform: scale(1);
+    opacity: 1;
+    color: #222;
+}
+
+/* Button 4 Style */
+
+.btn-4{
+    padding: 30px;
+    background-color: #040d15;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.btn-4 a{
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-image: linear-gradient(90deg , #0162c8 , #55e7fc);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-4 a span{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    animation: AnimateRipples 1s linear infinite;
+}
+
+@keyframes AnimateRipples{
+    0%{
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+/* Button 5 Style */
+
+.btn-5{
+    padding: 30px;
+    background-color: #0c0c0c;
+}
+
+.btn-5 a{
+    
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #eee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-5 a span{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-5 a .liquid{
+    width: 200px;
+    height: 200px;
+    background-color: #4973ff;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    box-shadow: inset 0 0 30px rgba(0,0,0, 0.5);
+    transition: 0.5s;
+}
+
+.btn-5 a:hover .liquid {
+    top: -120px;
+}
+
+.btn-5 a .liquid::before,
+.btn-5 a .liquid::after{
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% , -75%);
+}
+
+.btn-5 a .liquid::before{
+    border-radius: 45%;
+    background-color: rgba(20,20,20, 1);
+    animation: AnimateWavy 5s linear infinite;
+}
+
+.btn-5 a .liquid::after{
+    border-radius: 40%;
+    background-color: rgba(20, 20, 20, 0.5);
+    animation: AnimateWavy 10s linear infinite;
+}
+
+@keyframes AnimateWavy {
+    0%{
+        transform: translate(-50% , -75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+/* Button 6 Style */
